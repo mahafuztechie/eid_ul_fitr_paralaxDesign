@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>parallex scolling website</title>
+</head>
+<body>
+    <header id="header">
+        <a href="#" class="logo">Eid ul fitr</a>
+        <div class="toggle"></div>
+        <ul class="navigation">
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">about</a></li>
+            <li><a href="#">Schedule</a></li>
+            <li><a href="#">Contact</a></li>
+
+        </ul>
+    </header>
+    <section>
+        <img src="stars.png" id="stars">
+        <img src="stars2.png" id="stars2">
+        <img src="moon.png" id="moon">
+        <h2 id="text">Eid Mubarak</h2>
+        <img src="rock.png" id="rock">
+        <img src="masjid.png" id="masjid">
+        <img src="bottom.png" id="bottom">
+        <img src="lamp.png" id="lamp">
+    
+    </section>
+    <div class="sec">
+        <h2>Happy eid Muburak to u and your family.</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse voluptatum atque laboriosam nam. Sunt dicta ea at sed vel ipsa fugiat excepturi. Ex iusto porro quos aliquid! Ipsum rem omnis totam quam! Illum tenetur itaque, temporibus ipsa minima, reiciendis nulla natus labore totam sed architecto repellendus rerum maiores aliquid qui ipsam repellat! Iusto atque nihil quidem. At perferendis rerum cum alias nostrum illo assumenda vitae optio, tempore delectus harum temporibus accusamus officia iusto eveniet architecto! Voluptas numquam veniam itaque blanditiis necessitatibus qui officia recusandae exercitationem possimus? Distinctio maxime magni omnis fuga amet? Repellendus voluptatum adipisci vel temporibus animi ab esse tempora nemo sequi. Laborum ea, quis veniam dolor atque aut. Explicabo rerum id molestiae hic voluptas in nam voluptate voluptatum! Voluptates molestiae rem porro nam mollitia eaque cupiditate temporibus officia rerum. Perspiciatis dolores praesentium minus iusto optio necessitatibus fugiat vel? Pariatur obcaecati saepe perspiciatis sunt ab dolores nam minima, commodi dolor temporibus minus est deleniti cumque voluptas sapiente necessitatibus a optio quis, nisi similique aliquam sit fugiat quaerat! Quis odit eum sequi consequuntur eaque ducimus maiores perspiciatis, accusamus soluta earum quaerat ipsam ipsum illo blanditiis enim perferendis praesentium explicabo dolorum veniam fugit eligendi cumque. Qui doloribus maxime enim odit fugiat soluta error nisi voluptatibus rerum accusantium porro, ipsam libero ullam vitae earum distinctio pariatur voluptatem, sint animi velit at magni ut provident omnis. Cupiditate doloribus amet assumenda iste. Hic magni sequi ad perferendis explicabo ipsa sint distinctio soluta, voluptatem exercitationem totam natus, odit est doloribus pariatur vero provident inventore omnis quo corrupti quod vitae repellendus temporibus! Ad, saepe impedit. Veniam et libero hic quasi eum nihil sed eligendi ducimus nisi dolores? Ex, voluptate optio. Magni autem eveniet repellat magnam ab iste ad in ratione, rem eum eius voluptatem, consequatur ex! Ut sapiente libero, porro deleniti molestiae ullam quas ipsam odit veniam id nemo praesentium doloremque voluptas facere expedita beatae blanditiis inventore. Nostrum, quidem labore, dolor quasi architecto, aut dolore alias eligendi accusamus suscipit tenetur. Enim sequi tempora adipisci quam unde, perferendis itaque, quaerat excepturi debitis repellendus quisquam commodi neque consectetur. Perspiciatis, odit quisquam porro modi soluta sapiente sequi? Dolore sunt vel asperiores dolor, earum vero necessitatibus provident quaerat accusamus quidem minus, esse cum aliquid quos assumenda obcaecati amet illo veniam suscipit reprehenderit delectus excepturi! Doloremque consequuntur perspiciatis maiores? Iste libero praesentium consectetur tempore quod qui quisquam culpa at minus asperiores, incidunt est nam perferendis officia debitis tenetur esse eius ex optio rerum, sit eaque doloribus. Quas assumenda nisi id unde facere nesciunt dolor, voluptatem maxime fuga ex dolorem magni nobis, laborum hic debitis iure dolores perspiciatis! In suscipit minus fugit neque ducimus deleniti voluptates exercitationem explicabo quos vel minima blanditiis adipisci, nihil molestiae impedit illum! Quidem incidunt harum, dolor explicabo nisi vel! Iure commodi distinctio debitis nesciunt aspernatur dignissimos nobis reiciendis ducimus officiis numquam ipsam vel alias iusto minus fugiat animi, mollitia eius dicta molestiae. Voluptates cumque rerum necessitatibus veniam eaque vel cupiditate animi aliquid? Sit minus expedita dignissimos, eos nostrum eveniet modi ipsam aut, reiciendis cumque iure quia soluta?</p>
+
+    </div>
+
+    <script>
+        let stars = document.getElementById("stars");
+        let stars2 = document.getElementById("stars2");
+        let moon = document.getElementById("moon");
+        let rock = document.getElementById("rock");
+        let masjid = document.getElementById("masjid");
+        let text = document.getElementById("text");
+        let header = document.getElementById("header");
+
+
+        window.addEventListener("scroll", function(){
+            let value = window.scrollY;
+            stars.style.bottom = value * 0.05 + "%";
+            stars2.style.bottom = value * 0.025 + "%";
+            moon.style.bottom = value * -0.5 + "px";
+            rock.style.bottom = value * -0.75 + "px";
+            masjid.style.bottom = value * -0.15 + "px";
+            text.style.right = -100 + value * 0.5 + "%";
+            text.style.top = 50 + value * 0.1 + "%";
+            header.style.top = value * 0.5 + "px";
+
+
+
+        })
+
+
+
+
+
+
+        const toggleMenu = document.querySelector(".toggle");
+        const navigation = document.querySelector(".navigation");
+        toggleMenu.onclick = function(){
+            toggleMenu.classList.toggle("active");
+            navigation.classList.toggle("active");
+        }
+    </script>
+</body>
+</html>
